@@ -1,15 +1,15 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import './App.css';
 import Header from './components/Header.jsx';
+import Result from './components/Results.jsx';
 import UserInput from './components/UserInput.jsx';
-import Result from './components/Result.jsx';
 
 function App() {
   const [userInput,setUserInput]=useState({
-    initialInvestment: 20000,
-    annualInvestment: 3000,
-    expectedReturn: 8,
-    duration: 20,
+    initialInvestment: '',
+    annualInvestment: '',
+    expectedReturn: '',
+    duration: '',
 });
 const inputIsValid = userInput.duration>=1;
 
