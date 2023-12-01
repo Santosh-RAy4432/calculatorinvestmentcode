@@ -11,6 +11,7 @@ function App() {
     expectedReturn: 8,
     duration: 20,
 });
+const inputIsValid = userInput.duration>=1;
 
 
 function handleChange(newIdentifier, newValue){
@@ -25,7 +26,8 @@ function handleChange(newIdentifier, newValue){
    <>
    <Header />
    <UserInput userInput={userInput} onChange ={handleChange}/>
-   <Result input={userInput}/>
+   {!inputIsValid && <p className='center'> Please Enter Valid duration</p>}
+   {inputIsValid && <Result input={userInput}/>}
    </>
   );
 }
